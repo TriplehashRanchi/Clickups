@@ -75,7 +75,7 @@ function Sidebar() {
 
           <div className="flex items-center gap-3  hover:bg-zinc-800 p-1 rounded-md">
             <RiUserFollowLine />
-            <Link href="/my-tasks">
+            <Link href="dhannu/my-tasks">
               <h2 className="cursor-pointer">My Tasks</h2>
             </Link>
           </div>

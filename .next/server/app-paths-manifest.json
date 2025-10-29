@@ -1,6 +1,6 @@
 {
-  "/dhannu/(routes)/projects/[projectId]/page": "app/dhannu/(routes)/projects/[projectId]/page.js",
   "/dhannu/(routes)/teams/page": "app/dhannu/(routes)/teams/page.js",
   "/dhannu/page": "app/dhannu/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }
