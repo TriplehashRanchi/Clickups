@@ -8,6 +8,7 @@ export default async function ManagerPage() {
   } = await supabase.auth.getSession();
   if (!session?.user) redirect("/login");
 
+  // Fetch user profile
   const { data: profile } = await supabase
     .from("profiles")
     .select("role, full_name")
