@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/krson/OneDrive/Desktop/new%20triplehash/Clickups/app/dhannu/layout.js"],"sourcesContent":["\r\nconst geistSans = Geist({\r\n  variable: \"--font-geist-sans\",\r\n  subsets: [\"latin\"],\r\n});\r\n\r\nconst geistMono = Geist_Mono({\r\n  variable: \"--font-geist-mono\",\r\n  subsets: [\"latin\"],\r\n});\r\n\r\nexport default function RootLayout({ children }) {\r\n  return (\r\n    <html lang=\"en\">\r\n      <body\r\n        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen flex flex-col`}\r\n      >\r\n        {children}\r\n      </body>\r\n    </html>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;;AACA,MAAM,YAAY,MAAM;IACtB,UAAU;IACV,SAAS;QAAC;KAAQ;AACpB;AAEA,MAAM,YAAY,WAAW;IAC3B,UAAU;IACV,SAAS;QAAC;KAAQ;AACpB;AAEe,SAAS,WAAW,EAAE,QAAQ,EAAE;IAC7C,qBACE,8OAAC;QAAK,MAAK;kBACT,cAAA,8OAAC;YACC,WAAW,GAAG,UAAU,QAAQ,CAAC,CAAC,EAAE,UAAU,QAAQ,CAAC,mCAAmC,CAAC;sBAE1F;;;;;;;;;;;AAIT","debugId":null}}]
+}

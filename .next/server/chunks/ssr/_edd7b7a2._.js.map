@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/krson/OneDrive/Desktop/new%20triplehash/Clickups/app/dhannu/%28routes%29/todos/%5BtodoId%5D/page.jsx"],"sourcesContent":["\"use client\";\r\nimport { useParams } from \"next/navigation\";\r\nimport React from \"react\";\r\n\r\nexport default function page() {\r\n  const { todoId } = useParams();\r\n  console.log(todoId);\r\n  return (\r\n    <div>\r\n      <h1>todo</h1>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AACA;AACA;AAFA;;;;AAIe,SAAS;IACtB,MAAM,EAAE,MAAM,EAAE,GAAG,IAAA,+IAAS;IAC5B,QAAQ,GAAG,CAAC;IACZ,qBACE,8OAAC;kBACC,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGV","debugId":null}},
+    {"offset": {"line": 35, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/krson/OneDrive/Desktop/new%20triplehash/Clickups/node_modules/next/navigation.js"],"sourcesContent":["module.exports = require('./dist/client/components/navigation')\n"],"names":[],"mappings":"AAAA,OAAO,OAAO","ignoreList":[0],"debugId":null}}]
+}

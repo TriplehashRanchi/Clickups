@@ -1,7 +1,6 @@
 {
-  "/(Auth)/login/page": "app/(Auth)/login/page.js",
-  "/(Auth)/signup/page": "app/(Auth)/signup/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/dhannu/(routes)/projects/[projectId]/page": "app/dhannu/(routes)/projects/[projectId]/page.js",
+  "/dhannu/(routes)/teams/page": "app/dhannu/(routes)/teams/page.js",
+  "/dhannu/page": "app/dhannu/page.js",
   "/page": "app/page.js"
 }

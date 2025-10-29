@@ -1,50 +1,23 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
-    "/_app": [
-      "static/chunks/96fcc_next_dist_compiled_next-devtools_index_24b6a9cc.js",
-      "static/chunks/96fcc_next_dist_compiled_104fd9fd._.js",
-      "static/chunks/96fcc_next_dist_shared_lib_dec7a4d0._.js",
-      "static/chunks/96fcc_next_dist_client_7e986fc5._.js",
-      "static/chunks/96fcc_next_dist_32e94b4d._.js",
-      "static/chunks/96fcc_next_app_010e5817.js",
-      "static/chunks/[next]_entry_page-loader_ts_4f3c50cc._.js",
-      "static/chunks/96fcc_react-dom_d70f48bc._.js",
-      "static/chunks/96fcc_cc27aff6._.js",
-      "static/chunks/[root-of-the-server]__6f9aacae._.js",
-      "static/chunks/Desktop_ClickUps_pages__app_2da965e7._.js",
-      "static/chunks/turbopack-Desktop_ClickUps_pages__app_136281da._.js"
-    ],
-    "/_error": [
-      "static/chunks/96fcc_next_dist_compiled_next-devtools_index_24b6a9cc.js",
-      "static/chunks/96fcc_next_dist_compiled_104fd9fd._.js",
-      "static/chunks/96fcc_next_dist_shared_lib_a65ff8f5._.js",
-      "static/chunks/96fcc_next_dist_client_7e986fc5._.js",
-      "static/chunks/96fcc_next_dist_a40de493._.js",
-      "static/chunks/96fcc_next_error_cc392aac.js",
-      "static/chunks/[next]_entry_page-loader_ts_68ce3b57._.js",
-      "static/chunks/96fcc_react-dom_d70f48bc._.js",
-      "static/chunks/96fcc_cc27aff6._.js",
-      "static/chunks/[root-of-the-server]__5a202391._.js",
-      "static/chunks/Desktop_ClickUps_pages__error_2da965e7._.js",
-      "static/chunks/turbopack-Desktop_ClickUps_pages__error_1c30c2c3._.js"
-    ]
+    "/_app": []
   },
   "devFiles": [],
   "ampDevFiles": [],
   "polyfillFiles": [
-    "static/chunks/96fcc_next_dist_build_polyfills_polyfill-nomodule.js"
+    "static/chunks/node_modules_next_dist_build_polyfills_polyfill-nomodule.js"
   ],
   "lowPriorityFiles": [],
   "rootMainFiles": [
-    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_4ace397e._.js",
-    "static/chunks/96fcc_next_dist_compiled_react-dom_a9b09140._.js",
-    "static/chunks/96fcc_next_dist_compiled_next-devtools_index_88d8037d.js",
-    "static/chunks/96fcc_next_dist_compiled_5c8825bc._.js",
-    "static/chunks/96fcc_next_dist_client_3e83719c._.js",
-    "static/chunks/96fcc_next_dist_ae1f2619._.js",
-    "static/chunks/96fcc_@swc_helpers_cjs_7a67a2d7._.js",
-    "static/chunks/Desktop_ClickUps_a0ff3932._.js",
-    "static/chunks/turbopack-Desktop_ClickUps_f102e20a._.js"
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_57d40746._.js",
+    "static/chunks/node_modules_next_dist_compiled_react-dom_1e674e59._.js",
+    "static/chunks/node_modules_next_dist_compiled_next-devtools_index_a9cb0712.js",
+    "static/chunks/node_modules_next_dist_compiled_5150ccfd._.js",
+    "static/chunks/node_modules_next_dist_client_cf1d9188._.js",
+    "static/chunks/node_modules_next_dist_b0daae9a._.js",
+    "static/chunks/node_modules_@swc_helpers_cjs_b3dc30d6._.js",
+    "static/chunks/_a0ff3932._.js",
+    "static/chunks/turbopack-_cdba956c._.js"
   ],
   "ampFirstPages": []
 };
