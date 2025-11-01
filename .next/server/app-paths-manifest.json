@@ -1,5 +1,8 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/dhannu/(routes)/projects/[projectId]/page": "app/dhannu/(routes)/projects/[projectId]/page.js",
   "/dhannu/(routes)/teams/page": "app/dhannu/(routes)/teams/page.js",
+  "/dhannu/(routes)/todos/[todoId]/page": "app/dhannu/(routes)/todos/[todoId]/page.js",
   "/dhannu/page": "app/dhannu/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
