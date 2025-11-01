@@ -7,61 +7,16 @@ import { FcCalendar } from "react-icons/fc";
 import { GiArtificialHive } from "react-icons/gi";
 import { MdSupportAgent } from "react-icons/md";
 import { SpaceContext } from "../../context/SpaceContext";
-import { IoIosFlag } from "react-icons/io";
-import { RxCircle } from "react-icons/rx";
-import { GiPlainCircle } from "react-icons/gi";
-import Todo from "./Todo";
+import Todo from "../../components/todo/Todo";
+import Link from "next/link";
+import { ProjectContext } from "../../context/ProjectContext";
 
-export default function ProjectTodo({ projects }) {
-  const { list } = useContext(SpaceContext);
+export default function ProjectTodo() {
+  const { projects, assignUser, statusOptions, priorityOptions } =
+    useContext(ProjectContext);
   const [projectState, setProjectState] = useState(projects);
-  const found = list.find((cur) => cur.id == projects[0].projectId);
-
-  const statusOptions = [
-    {
-      value: "completed",
-      label: "Completed",
-      icons: <GiPlainCircle className="text-green-600 mt-1.5" size={16} />,
-    },
-    {
-      value: "pending",
-      label: "Pending",
-      icons: <RxCircle className="mt-1.5" size={16} />,
-    },
-    {
-      value: "inprogress",
-      label: "Progress",
-      icons: <GiPlainCircle className="text-purple-600 mt-1.5" size={16} />,
-    },
-  ];
-
-  const assignUser = [
-    { value: "dhannu", label: "Dhannu Kumar" },
-    { value: "rohit", label: "Rohit Jha" },
-    { value: "rupak", label: "Rupak Rout" },
-    { value: "himanshu", label: "Himanshu Nagar" },
-  ];
-
-  const priorityOptions = [
-    {
-      value: "high",
-      label: "High",
-      icons: <IoIosFlag size={17} className="text-red-600" />,
-    },
-    {
-      value: "medium",
-      label: "Medium",
-      icons: <IoIosFlag size={17} className="text-yellow-600 " />,
-    },
-    {
-      value: "low",
-      label: "Low",
-      icons: <IoIosFlag size={17} className="text-white " />,
-    },
-  ];
 
   const handleAddTask = (projectId, taskName) => {
-    console.log(projectId, taskName);
     const newTasks = {
       id: Date.now(),
       name: taskName,
@@ -98,15 +53,11 @@ export default function ProjectTodo({ projects }) {
     );
   };
 
-  useEffect(() => {
-    console.log("projects", projectState);
-  });
-
   return (
-    <div className="w-full h-full bg-zinc-950 rounded-2xl">
-      <div className="w-full flex justify-between">
+    <div className="w-full h-full relative bg-zinc-950 rounded-2xl">
+      <div className="w-full flex justify-between px-2 py-2">
         <h1 className="text-xl text-zinc-200 font-semibold">
-          {found?.spaceList || "Dhannu Workspace"}
+          {"Dhannu Workspace"}
         </h1>
         <div className="flex gap-6 text-[15px]">
           <div className="flex items-center gap-2">
@@ -124,7 +75,7 @@ export default function ProjectTodo({ projects }) {
         </div>
       </div>
 
-      <div className="flex items-center gap-4 border-b border-gray-800 py-2 text-sm text-gray-300">
+      <div className="flex items-center gap-4 border-b border-gray-800 px-2 py-1 text-sm text-gray-300">
         <div className="flex items-center gap-1 cursor-pointer hover:text-white">
           <CiViewList /> <span>List</span>
         </div>
@@ -140,11 +91,11 @@ export default function ProjectTodo({ projects }) {
         </div>
       </div>
 
-      <div className="w-full py-5">
-        {projectState.map((project) => {
+      <div className="w-full py-5 overflow-y-auto max-h-[calc(100vh-180px)] no-scrollbar ">
+        {projectState.map((project, idx) => {
           return (
             <div
-              key={project.id}
+              key={idx}
               className="w-full flex flex-col mb-6 border-zinc-700 pb-4 px-4"
             >
               <div className="w-full flex justify-between items-center">
@@ -172,6 +123,10 @@ export default function ProjectTodo({ projects }) {
           );
         })}
       </div>
+
+      <button className="bg-purple-600 hover:bg-purple-700 cursor-pointer absolute bottom-5 right-5 text-left rounded-full px-3 py-2 outline-none">
+        Create Another Projects
+      </button>
     </div>
   );
 }

@@ -10,9 +10,11 @@
   "static/chunks/node_modules_react-icons_io5_index_mjs_9bce8f6c._.js",
   "static/chunks/node_modules_react-icons_io_index_mjs_7f31b177._.js",
   "static/chunks/node_modules_react-icons_hi2_index_mjs_94c5f7f2._.js",
+  "static/chunks/node_modules_react-icons_gi_index_mjs_657583d5._.js",
+  "static/chunks/node_modules_react-icons_rx_index_mjs_03f9ea46._.js",
   "static/chunks/node_modules_react-icons_lib_844c6c50._.js",
-  "static/chunks/node_modules_next_dist_86f66277._.js",
-  "static/chunks/app_dhannu_cf62f205._.js"
+  "static/chunks/node_modules_next_a760476a._.js",
+  "static/chunks/app_dhannu_beea1056._.js"
 ],
     source: "dynamic"
 });

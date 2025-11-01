@@ -441,9 +441,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$context$2f$
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$io$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/io/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$rx$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/rx/index.mjs [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$todo$2f$Todo$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/dhannu/components/todo/Todo.jsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -471,7 +473,7 @@ function ProjectTodo(param) {
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                lineNumber: 24,
+                lineNumber: 25,
                 columnNumber: 14
             }, this)
         },
@@ -483,7 +485,7 @@ function ProjectTodo(param) {
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 14
             }, this)
         },
@@ -495,7 +497,7 @@ function ProjectTodo(param) {
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                lineNumber: 34,
+                lineNumber: 35,
                 columnNumber: 14
             }, this)
         }
@@ -527,7 +529,7 @@ function ProjectTodo(param) {
                 className: "text-red-600"
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                lineNumber: 49,
+                lineNumber: 50,
                 columnNumber: 14
             }, this)
         },
@@ -539,7 +541,7 @@ function ProjectTodo(param) {
                 className: "text-yellow-600 "
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                lineNumber: 54,
+                lineNumber: 55,
                 columnNumber: 14
             }, this)
         },
@@ -551,13 +553,12 @@ function ProjectTodo(param) {
                 className: "text-white "
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                lineNumber: 59,
+                lineNumber: 60,
                 columnNumber: 14
             }, this)
         }
     ];
     const handleAddTask = (projectId, taskName)=>{
-        console.log(projectId, taskName);
         const newTasks = {
             id: Date.now(),
             name: taskName,
@@ -584,13 +585,8 @@ function ProjectTodo(param) {
                         } : task)
                 } : project));
     };
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "ProjectTodo.useEffect": ()=>{
-            console.log("projects", projectState);
-        }
-    }["ProjectTodo.useEffect"]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full h-full bg-zinc-950 rounded-2xl",
+        className: "w-full h-full relative bg-zinc-950 rounded-2xl",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "w-full flex justify-between",
@@ -600,7 +596,7 @@ function ProjectTodo(param) {
                         children: (found === null || found === void 0 ? void 0 : found.spaceList) || "Dhannu Workspace"
                     }, void 0, false, {
                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                        lineNumber: 108,
+                        lineNumber: 104,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -613,14 +609,14 @@ function ProjectTodo(param) {
                                         size: 17
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                        lineNumber: 113,
+                                        lineNumber: 109,
                                         columnNumber: 13
                                     }, this),
                                     " Agents"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 112,
+                                lineNumber: 108,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -630,14 +626,14 @@ function ProjectTodo(param) {
                                         size: 17
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                        lineNumber: 116,
+                                        lineNumber: 112,
                                         columnNumber: 13
                                     }, this),
                                     " Automate"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 115,
+                                lineNumber: 111,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -647,14 +643,14 @@ function ProjectTodo(param) {
                                         size: 17
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                        lineNumber: 119,
+                                        lineNumber: 115,
                                         columnNumber: 13
                                     }, this),
                                     " Ask AI"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 118,
+                                lineNumber: 114,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -664,26 +660,26 @@ function ProjectTodo(param) {
                                         size: 17
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                        lineNumber: 122,
+                                        lineNumber: 118,
                                         columnNumber: 13
                                     }, this),
                                     " Share"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 121,
+                                lineNumber: 117,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                        lineNumber: 111,
+                        lineNumber: 107,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                lineNumber: 107,
+                lineNumber: 103,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -694,7 +690,7 @@ function ProjectTodo(param) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$ci$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CiViewList"], {}, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 129,
+                                lineNumber: 125,
                                 columnNumber: 11
                             }, this),
                             " ",
@@ -702,13 +698,13 @@ function ProjectTodo(param) {
                                 children: "List"
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 129,
+                                lineNumber: 125,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                        lineNumber: 128,
+                        lineNumber: 124,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -716,7 +712,7 @@ function ProjectTodo(param) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaFlipboard"], {}, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 132,
+                                lineNumber: 128,
                                 columnNumber: 11
                             }, this),
                             " ",
@@ -724,13 +720,13 @@ function ProjectTodo(param) {
                                 children: "Board"
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 132,
+                                lineNumber: 128,
                                 columnNumber: 27
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                        lineNumber: 131,
+                        lineNumber: 127,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -738,7 +734,7 @@ function ProjectTodo(param) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fc$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FcCalendar"], {}, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 135,
+                                lineNumber: 131,
                                 columnNumber: 11
                             }, this),
                             " ",
@@ -746,13 +742,13 @@ function ProjectTodo(param) {
                                 children: "Calendar"
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 135,
+                                lineNumber: 131,
                                 columnNumber: 26
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                        lineNumber: 134,
+                        lineNumber: 130,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -762,26 +758,26 @@ function ProjectTodo(param) {
                                 children: "+"
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 138,
+                                lineNumber: 134,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "View"
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 139,
+                                lineNumber: 135,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                        lineNumber: 137,
+                        lineNumber: 133,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                lineNumber: 127,
+                lineNumber: 123,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -798,7 +794,7 @@ function ProjectTodo(param) {
                                         children: project.name
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                        lineNumber: 151,
+                                        lineNumber: 147,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -809,7 +805,7 @@ function ProjectTodo(param) {
                                                 children: "Assignee"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                                lineNumber: 155,
+                                                lineNumber: 151,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -817,7 +813,7 @@ function ProjectTodo(param) {
                                                 children: "Due date"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                                lineNumber: 156,
+                                                lineNumber: 152,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -825,7 +821,7 @@ function ProjectTodo(param) {
                                                 children: "Priority"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                                lineNumber: 157,
+                                                lineNumber: 153,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -833,19 +829,19 @@ function ProjectTodo(param) {
                                                 children: "Menu"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                                lineNumber: 158,
+                                                lineNumber: 154,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                        lineNumber: 154,
+                                        lineNumber: 150,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 150,
+                                lineNumber: 146,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$todo$2f$Todo$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -857,29 +853,44 @@ function ProjectTodo(param) {
                                 onAddTask: (taskName)=>handleAddTask(project.id, taskName)
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                                lineNumber: 161,
+                                lineNumber: 157,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, project.id, true, {
                         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                        lineNumber: 146,
+                        lineNumber: 142,
                         columnNumber: 13
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-                lineNumber: 143,
+                lineNumber: 139,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                href: "/dhannu/projects/".concat(found.id),
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    className: "bg-purple-600 hover:bg-purple-700 cursor-pointer absolute bottom-0 right-0 text-left rounded-full px-3 py-2 outline-none",
+                    children: "Create Another Projects"
+                }, void 0, false, {
+                    fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
+                    lineNumber: 173,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
+                lineNumber: 172,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/dhannu/components/todo/ProjectDetails.jsx",
-        lineNumber: 106,
+        lineNumber: 102,
         columnNumber: 5
     }, this);
 }
-_s(ProjectTodo, "93LUtLyZZEHqAtpK0HZ9TSZAIeg=");
+_s(ProjectTodo, "RdmC4lRmz7Mg6M4SmQ3kN/vPqJE=");
 _c = ProjectTodo;
 var _c;
 __turbopack_context__.k.register(_c, "ProjectTodo");
@@ -1011,13 +1022,7 @@ function Page() {
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full h-full bg-zinc-950 text-white p-4 rounded-2xl flex flex-col gap-10",
-        children: projects.length > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$todo$2f$ProjectDetails$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-            projects: projects
-        }, void 0, false, {
-            fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-            lineNumber: 77,
-            columnNumber: 9
-        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "w-full f-full bg-zinc-950 text-white flex flex-col gap-10 p-3",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1029,13 +1034,13 @@ function Page() {
                         className: "text-2xl font-semibold bg-transparent outline-none w-full placeholder-zinc-500 text-zinc-200 border-b border-zinc-800 pb-2 focus:border-purple-500 transition duration-300"
                     }, void 0, false, {
                         fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                        lineNumber: 81,
-                        columnNumber: 13
+                        lineNumber: 78,
+                        columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                    lineNumber: 80,
-                    columnNumber: 11
+                    lineNumber: 77,
+                    columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex flex-wrap gap-5",
@@ -1052,8 +1057,8 @@ function Page() {
                                             className: "text-purple-400"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                            lineNumber: 94,
-                                            columnNumber: 19
+                                            lineNumber: 91,
+                                            columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
@@ -1062,8 +1067,8 @@ function Page() {
                                                     children: "Status"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                                    lineNumber: 96,
-                                                    columnNumber: 21
+                                                    lineNumber: 93,
+                                                    columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$resuableComponents$2f$Dropdown$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                     items: statusOptions,
@@ -1071,30 +1076,30 @@ function Page() {
                                                     onSelect: (item)=>handleChange("status", item.value)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                                    lineNumber: 100,
-                                                    columnNumber: 21
+                                                    lineNumber: 97,
+                                                    columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                            lineNumber: 95,
-                                            columnNumber: 19
+                                            lineNumber: 92,
+                                            columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                    lineNumber: 93,
-                                    columnNumber: 17
+                                    lineNumber: 90,
+                                    columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                lineNumber: 92,
-                                columnNumber: 15
+                                lineNumber: 89,
+                                columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                            lineNumber: 91,
-                            columnNumber: 13
+                            lineNumber: 88,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex-1 min-w-[220px] relative",
@@ -1108,8 +1113,8 @@ function Page() {
                                             className: "text-purple-400"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                            lineNumber: 113,
-                                            columnNumber: 19
+                                            lineNumber: 110,
+                                            columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
@@ -1118,8 +1123,8 @@ function Page() {
                                                     children: "Assignee"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                                    lineNumber: 115,
-                                                    columnNumber: 21
+                                                    lineNumber: 112,
+                                                    columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$resuableComponents$2f$Dropdown$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                     items: assignUser,
@@ -1129,30 +1134,30 @@ function Page() {
                                                     onSelect: (item)=>handleChange("assignee", item.value)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                                    lineNumber: 118,
-                                                    columnNumber: 21
+                                                    lineNumber: 115,
+                                                    columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                            lineNumber: 114,
-                                            columnNumber: 19
+                                            lineNumber: 111,
+                                            columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                    lineNumber: 112,
-                                    columnNumber: 17
+                                    lineNumber: 109,
+                                    columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                lineNumber: 111,
-                                columnNumber: 15
+                                lineNumber: 108,
+                                columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                            lineNumber: 110,
-                            columnNumber: 13
+                            lineNumber: 107,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex-1 min-w-[220px] relative",
@@ -1166,8 +1171,8 @@ function Page() {
                                             className: "text-purple-400"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                            lineNumber: 133,
-                                            columnNumber: 19
+                                            lineNumber: 130,
+                                            columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             children: [
@@ -1176,8 +1181,8 @@ function Page() {
                                                     children: "Priority"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                                    lineNumber: 135,
-                                                    columnNumber: 21
+                                                    lineNumber: 132,
+                                                    columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$resuableComponents$2f$Dropdown$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                     items: priorityOptions,
@@ -1185,30 +1190,30 @@ function Page() {
                                                     onSelect: (item)=>handleChange("priority", item.value)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                                    lineNumber: 138,
-                                                    columnNumber: 21
+                                                    lineNumber: 135,
+                                                    columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                            lineNumber: 134,
-                                            columnNumber: 19
+                                            lineNumber: 131,
+                                            columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                    lineNumber: 132,
-                                    columnNumber: 17
+                                    lineNumber: 129,
+                                    columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                lineNumber: 131,
-                                columnNumber: 15
+                                lineNumber: 128,
+                                columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                            lineNumber: 130,
-                            columnNumber: 13
+                            lineNumber: 127,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex flex-col justify-center p-4 bg-zinc-900 border border-zinc-800 rounded-lg min-w-[220px] shadow-md hover:border-purple-500/60 transition",
@@ -1220,56 +1225,56 @@ function Page() {
                                         className: "text-purple-400"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                        lineNumber: 150,
-                                        columnNumber: 17
+                                        lineNumber: 147,
+                                        columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "jsx-57b110aecf39a6c0",
+                                        className: "jsx-267b32ee313c4b5d",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "jsx-57b110aecf39a6c0" + " " + "text-xs text-zinc-500 uppercase tracking-wider",
+                                                className: "jsx-267b32ee313c4b5d" + " " + "text-xs text-zinc-500 uppercase tracking-wider",
                                                 children: "End Date"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                                lineNumber: 152,
-                                                columnNumber: 19
+                                                lineNumber: 149,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                 type: "date",
                                                 value: formData.endDate,
                                                 onChange: (e)=>handleChange("endDate", e.target.value),
-                                                className: "jsx-57b110aecf39a6c0" + " " + "bg-transparent text-zinc-300 text-sm mt-1 outline-none border-b border-zinc-800 focus:border-purple-500 transition duration-300"
+                                                className: "jsx-267b32ee313c4b5d" + " " + "bg-transparent text-zinc-300 text-sm mt-1 outline-none border-b border-zinc-800 focus:border-purple-500 transition duration-300"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                                lineNumber: 155,
-                                                columnNumber: 19
+                                                lineNumber: 152,
+                                                columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                id: "57b110aecf39a6c0",
-                                                children: "input[type=date].jsx-57b110aecf39a6c0::-webkit-calendar-picker-indicator{filter:invert();cursor:pointer}"
+                                                id: "267b32ee313c4b5d",
+                                                children: "input[type=date].jsx-267b32ee313c4b5d::-webkit-calendar-picker-indicator{filter:invert();cursor:pointer}"
                                             }, void 0, false, void 0, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                        lineNumber: 151,
-                                        columnNumber: 17
+                                        lineNumber: 148,
+                                        columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                                lineNumber: 149,
-                                columnNumber: 15
+                                lineNumber: 146,
+                                columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                            lineNumber: 148,
-                            columnNumber: 13
+                            lineNumber: 145,
+                            columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                    lineNumber: 90,
-                    columnNumber: 11
+                    lineNumber: 87,
+                    columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex flex-col gap-2",
@@ -1279,8 +1284,8 @@ function Page() {
                             children: "About Project"
                         }, void 0, false, {
                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                            lineNumber: 173,
-                            columnNumber: 13
+                            lineNumber: 170,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
                             rows: "4",
@@ -1290,14 +1295,14 @@ function Page() {
                             className: "w-full bg-zinc-900 border border-zinc-800 rounded-md p-3 text-zinc-300 outline-none focus:border-purple-500 resize-none transition shadow-sm hover:shadow-purple-500/10 duration-300"
                         }, void 0, false, {
                             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                            lineNumber: 174,
-                            columnNumber: 13
+                            lineNumber: 171,
+                            columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                    lineNumber: 172,
-                    columnNumber: 11
+                    lineNumber: 169,
+                    columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex justify-end",
@@ -1307,19 +1312,19 @@ function Page() {
                         children: "Create Project"
                     }, void 0, false, {
                         fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                        lineNumber: 184,
-                        columnNumber: 13
+                        lineNumber: 181,
+                        columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-                    lineNumber: 183,
-                    columnNumber: 11
+                    lineNumber: 180,
+                    columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
-            lineNumber: 79,
-            columnNumber: 9
+            lineNumber: 76,
+            columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/dhannu/(routes)/projects/[projectId]/page.jsx",
