@@ -9,8 +9,7 @@ import { useRouter } from "next/navigation";
 export const ProjectContext = createContext();
 
 export const ProjectProvider = ({ children }) => {
-  const [projects, setProjects] = useState([]);
-  const { list } = useContext(SpaceContext);
+  const { list, setList } = useContext(SpaceContext);
   const [projectID, setProjectId] = useState(null);
   const router = useRouter();
 
@@ -82,7 +81,13 @@ export const ProjectProvider = ({ children }) => {
       tasks: [],
     };
 
-    setProjects((prev) => [...prev, newProject]);
+    setList((prev) =>
+      prev.map((cur) => {
+        return cur.id == projectID
+          ? { ...cur, projects: [...cur.projects, newProject] }
+          : cur;
+      })
+    );
     setFormData({
       name: "",
       status: "",
@@ -91,19 +96,12 @@ export const ProjectProvider = ({ children }) => {
       endDate: "",
       description: "",
     });
-    router.push("/dhannu/projectDetails");
+    router.push(`/dhannu/projectDetails/${projectID}`);
   };
-
-  useEffect(() => {
-    console.log("projects", projects);
-    console.log("list", list);
-    console.log("projectID", projectID);
-  }, [projects]);
 
   return (
     <ProjectContext.Provider
       value={{
-        projects,
         assignUser,
         statusOptions,
         priorityOptions,

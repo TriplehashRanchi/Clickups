@@ -6,15 +6,18 @@ import { FaFlipboard } from "react-icons/fa";
 import { FcCalendar } from "react-icons/fc";
 import { GiArtificialHive } from "react-icons/gi";
 import { MdSupportAgent } from "react-icons/md";
-import { SpaceContext } from "../../context/SpaceContext";
-import Todo from "../../components/todo/Todo";
+import Todo from "../../../components/todo/Todo";
+import { ProjectContext } from "../../../context/ProjectContext";
 import Link from "next/link";
-import { ProjectContext } from "../../context/ProjectContext";
+import { useParams } from "next/navigation";
+import { SpaceContext } from "@/app/dhannu/context/SpaceContext";
 
 export default function ProjectTodo() {
-  const { projects, assignUser, statusOptions, priorityOptions } =
+  const { projectDetailsId } = useParams();
+  const { assignUser, statusOptions, priorityOptions } =
     useContext(ProjectContext);
-  const [projectState, setProjectState] = useState(projects);
+  const { list } = useContext(SpaceContext);
+  const [projectState, setProjectState] = useState([]);
 
   const handleAddTask = (projectId, taskName) => {
     const newTasks = {
@@ -52,6 +55,19 @@ export default function ProjectTodo() {
       )
     );
   };
+
+  useEffect(() => {
+    if (list.length > 0) {
+      const foundProject = list.find((cur) => cur.id == projectDetailsId);
+      if (foundProject) {
+        setProjectState(foundProject.projects);
+      }
+    }
+  }, [list, projectDetailsId]);
+
+  useEffect(() => {
+    console.log("projectState", projectState);
+  }, [projectState]);
 
   return (
     <div className="w-full h-full relative bg-zinc-950 rounded-2xl">
@@ -119,14 +135,16 @@ export default function ProjectTodo() {
                 }
                 onAddTask={(taskName) => handleAddTask(project.id, taskName)}
               />
+
+              <Link href={`/dhannu/projects/${project.id}`}>
+                <button className="bg-purple-600 hover:bg-purple-700 cursor-pointer absolute bottom-5 right-5 text-left rounded-full px-3 py-2 outline-none">
+                  Create Another Projects
+                </button>
+              </Link>
             </div>
           );
         })}
       </div>
-
-      <button className="bg-purple-600 hover:bg-purple-700 cursor-pointer absolute bottom-5 right-5 text-left rounded-full px-3 py-2 outline-none">
-        Create Another Projects
-      </button>
     </div>
   );
 }

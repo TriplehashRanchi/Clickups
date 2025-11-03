@@ -37,6 +37,7 @@ export const SpaceProvide = ({ children }) => {
         description,
         color: randomColor,
         todo: [],
+        projects: [],
       },
     ]);
     setSpaceInput("");

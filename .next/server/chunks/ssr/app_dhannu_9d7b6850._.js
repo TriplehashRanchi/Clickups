@@ -11,7 +11,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 "use client";
 ;
 ;
-function Dropdown({ items = [], placeholder = "select Value", onSelect, className = "", showInitial = false, showIcons = false }) {
+function Dropdown({ items = [], placeholder = "select Value", onSelect, className = "", showInitial = false, showIcons = false, styling }) {
     const [open, setOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [selectedValue, setSelectedValue] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const handleDropdown = (item)=>{
@@ -25,16 +25,16 @@ function Dropdown({ items = [], placeholder = "select Value", onSelect, classNam
                 onClick: ()=>setOpen(!open),
                 className: "w-full cursor-pointer",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                    className: `text-sm cursor-pointer outline-none ${selectedValue ? className : ""}`,
+                    className: `${styling} text-sm cursor-pointer outline-none ${selectedValue ? className : ""} `,
                     children: selectedValue ? showInitial ? selectedValue.value.charAt(0).toUpperCase() : showIcons ? selectedValue.icons : selectedValue.label : placeholder
                 }, void 0, false, {
                     fileName: "[project]/app/dhannu/components/resuableComponents/Dropdown.jsx",
-                    lineNumber: 24,
+                    lineNumber: 25,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/components/resuableComponents/Dropdown.jsx",
-                lineNumber: 23,
+                lineNumber: 24,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -47,24 +47,24 @@ function Dropdown({ items = [], placeholder = "select Value", onSelect, classNam
                             children: item.label
                         }, idx, false, {
                             fileName: "[project]/app/dhannu/components/resuableComponents/Dropdown.jsx",
-                            lineNumber: 45,
+                            lineNumber: 46,
                             columnNumber: 17
                         }, this);
                     })
                 }, void 0, false, {
                     fileName: "[project]/app/dhannu/components/resuableComponents/Dropdown.jsx",
-                    lineNumber: 40,
+                    lineNumber: 41,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/components/resuableComponents/Dropdown.jsx",
-                lineNumber: 38,
+                lineNumber: 39,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/dhannu/components/resuableComponents/Dropdown.jsx",
-        lineNumber: 22,
+        lineNumber: 23,
         columnNumber: 5
     }, this);
 }

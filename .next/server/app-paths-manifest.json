@@ -1,8 +1,7 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/dhannu/(routes)/projectDetails/page": "app/dhannu/(routes)/projectDetails/page.js",
+  "/dhannu/(routes)/projectDetails/[projectDetailsId]/page": "app/dhannu/(routes)/projectDetails/[projectDetailsId]/page.js",
   "/dhannu/(routes)/projects/[projectId]/page": "app/dhannu/(routes)/projects/[projectId]/page.js",
   "/dhannu/page": "app/dhannu/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

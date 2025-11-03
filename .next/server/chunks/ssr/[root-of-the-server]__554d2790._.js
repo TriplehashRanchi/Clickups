@@ -42,7 +42,8 @@ const SpaceProvide = ({ children })=>{
                     spaceList: spaceInput,
                     description,
                     color: randomColor,
-                    todo: []
+                    todo: [],
+                    projects: []
                 }
             ]);
         setSpaceInput("");
@@ -69,7 +70,7 @@ const SpaceProvide = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/app/dhannu/context/SpaceContext.js",
-        lineNumber: 52,
+        lineNumber: 53,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -370,6 +371,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$ci$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-icons/ci/index.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$context$2f$SpaceContext$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/dhannu/context/SpaceContext.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
@@ -377,9 +379,15 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$context$2f$
 ;
 ;
 ;
+;
+;
 function Space() {
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
     const { space, handleSpace, handleList, list, spaceInput, description, setSpaceInput, setDescription, handleRemoveSpace } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$context$2f$SpaceContext$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SpaceContext"]);
     const [showList, setShowList] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    const handleNavigation = (id)=>{
+        router.push(`/dhannu/projects/${id}`);
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "h-full w-full py-4",
         children: [
@@ -388,7 +396,7 @@ function Space() {
                 children: "Favorites"
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                lineNumber: 26,
+                lineNumber: 33,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -399,7 +407,7 @@ function Space() {
                         children: "Spaces"
                     }, void 0, false, {
                         fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                        lineNumber: 29,
+                        lineNumber: 36,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -408,13 +416,13 @@ function Space() {
                         children: "+"
                     }, void 0, false, {
                         fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                        lineNumber: 31,
+                        lineNumber: 38,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                lineNumber: 28,
+                lineNumber: 35,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -428,7 +436,7 @@ function Space() {
                                 children: "A"
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                lineNumber: 40,
+                                lineNumber: 47,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -436,13 +444,13 @@ function Space() {
                                 children: "All Tasks"
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                lineNumber: 43,
+                                lineNumber: 50,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                        lineNumber: 39,
+                        lineNumber: 46,
                         columnNumber: 9
                     }, this),
                     list.map((cur)=>{
@@ -458,7 +466,7 @@ function Space() {
                                             children: "▶"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                            lineNumber: 52,
+                                            lineNumber: 59,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -466,44 +474,59 @@ function Space() {
                                             children: cur.spaceList.charAt(0)
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                            lineNumber: 60,
+                                            lineNumber: 67,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            href: `/dhannu/projects/${cur.id}`,
+                                            href: `/dhannu/projectDetails/${cur.id}`,
                                             className: "w-full",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                                 className: "text-sm text-gray-400 cursor-pointer py-1 px-2",
                                                 children: cur.spaceList
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                                lineNumber: 66,
+                                                lineNumber: 76,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                            lineNumber: 65,
+                                            lineNumber: 72,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            onClick: ()=>handleNavigation(cur.id),
+                                            className: "text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors mr-1  duration-300",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$ci$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CiCirclePlus"], {
+                                                size: 20
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/dhannu/components/ui/Space.jsx",
+                                                lineNumber: 85,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/dhannu/components/ui/Space.jsx",
+                                            lineNumber: 81,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             onClick: ()=>handleRemoveSpace(cur.id),
-                                            className: "text-gray-300 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors duration-300",
+                                            className: "text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors duration-300",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$ci$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CiCircleRemove"], {
                                                 size: 20
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                                lineNumber: 74,
+                                                lineNumber: 92,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                            lineNumber: 70,
+                                            lineNumber: 88,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 51,
+                                    lineNumber: 58,
                                     columnNumber: 15
                                 }, this),
                                 cur.id === showList && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -514,7 +537,7 @@ function Space() {
                                             size: 20
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                            lineNumber: 80,
+                                            lineNumber: 98,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -525,24 +548,24 @@ function Space() {
                                                 children: "List"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                                lineNumber: 82,
+                                                lineNumber: 100,
                                                 columnNumber: 21
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                            lineNumber: 81,
+                                            lineNumber: 99,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 79,
+                                    lineNumber: 97,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, cur.id, true, {
                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                            lineNumber: 47,
+                            lineNumber: 54,
                             columnNumber: 13
                         }, this);
                     }),
@@ -555,7 +578,7 @@ function Space() {
                                 children: "+"
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                lineNumber: 95,
+                                lineNumber: 113,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -563,19 +586,19 @@ function Space() {
                                 children: "New Space"
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                lineNumber: 96,
+                                lineNumber: 114,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                        lineNumber: 91,
+                        lineNumber: 109,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                lineNumber: 38,
+                lineNumber: 45,
                 columnNumber: 7
             }, this),
             space && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -593,7 +616,7 @@ function Space() {
                                     children: "Create a Space"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 109,
+                                    lineNumber: 127,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -603,18 +626,18 @@ function Space() {
                                         size: 20
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                        lineNumber: 114,
+                                        lineNumber: 132,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 110,
+                                    lineNumber: 128,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                            lineNumber: 108,
+                            lineNumber: 126,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -622,7 +645,7 @@ function Space() {
                             children: "A Space represents teams, departments, or groups, each with its own Lists, workflows, and settings."
                         }, void 0, false, {
                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                            lineNumber: 117,
+                            lineNumber: 135,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -633,7 +656,7 @@ function Space() {
                                     children: "Icons & name"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 122,
+                                    lineNumber: 140,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -644,7 +667,7 @@ function Space() {
                                             children: spaceInput.charAt(0) || "M"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                            lineNumber: 124,
+                                            lineNumber: 142,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -655,19 +678,19 @@ function Space() {
                                             className: " border-2 px-2 border-gray-500 w-full rounded-md"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                            lineNumber: 127,
+                                            lineNumber: 145,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 123,
+                                    lineNumber: 141,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                            lineNumber: 121,
+                            lineNumber: 139,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -682,13 +705,13 @@ function Space() {
                                             children: "(Optional)"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                            lineNumber: 138,
+                                            lineNumber: 156,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 137,
+                                    lineNumber: 155,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -698,13 +721,13 @@ function Space() {
                                     type: "text"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 140,
+                                    lineNumber: 158,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                            lineNumber: 136,
+                            lineNumber: 154,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -715,7 +738,7 @@ function Space() {
                                     children: "Default Permission"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 148,
+                                    lineNumber: 166,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -723,13 +746,13 @@ function Space() {
                                     children: "Full edit"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 149,
+                                    lineNumber: 167,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                            lineNumber: 147,
+                            lineNumber: 165,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -740,7 +763,7 @@ function Space() {
                                     children: "Use Templates"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 154,
+                                    lineNumber: 172,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -749,30 +772,30 @@ function Space() {
                                     children: "Continue"
                                 }, void 0, false, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                    lineNumber: 158,
+                                    lineNumber: 176,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                            lineNumber: 153,
+                            lineNumber: 171,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                    lineNumber: 104,
+                    lineNumber: 122,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                lineNumber: 100,
+                lineNumber: 118,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-        lineNumber: 25,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 }
@@ -1193,8 +1216,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navi
 ;
 const ProjectContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["createContext"])();
 const ProjectProvider = ({ children })=>{
-    const [projects, setProjects] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
-    const { list } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$context$2f$SpaceContext$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SpaceContext"]);
+    const { list, setList } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$context$2f$SpaceContext$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SpaceContext"]);
     const [projectID, setProjectId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
     const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
@@ -1220,7 +1242,7 @@ const ProjectProvider = ({ children })=>{
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 34,
+                lineNumber: 33,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -1232,7 +1254,7 @@ const ProjectProvider = ({ children })=>{
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 39,
+                lineNumber: 38,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -1244,7 +1266,7 @@ const ProjectProvider = ({ children })=>{
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 44,
+                lineNumber: 43,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         }
@@ -1276,7 +1298,7 @@ const ProjectProvider = ({ children })=>{
                 className: "text-red-600"
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 59,
+                lineNumber: 58,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -1288,7 +1310,7 @@ const ProjectProvider = ({ children })=>{
                 className: "text-yellow-600 "
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 64,
+                lineNumber: 63,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -1300,7 +1322,7 @@ const ProjectProvider = ({ children })=>{
                 className: "text-white "
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 69,
+                lineNumber: 68,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         }
@@ -1315,10 +1337,15 @@ const ProjectProvider = ({ children })=>{
             id: projectID,
             tasks: []
         };
-        setProjects((prev)=>[
-                ...prev,
-                newProject
-            ]);
+        setList((prev)=>prev.map((cur)=>{
+                return cur.id == projectID ? {
+                    ...cur,
+                    projects: [
+                        ...cur.projects,
+                        newProject
+                    ]
+                } : cur;
+            }));
         setFormData({
             name: "",
             status: "",
@@ -1327,18 +1354,10 @@ const ProjectProvider = ({ children })=>{
             endDate: "",
             description: ""
         });
-        router.push("/dhannu/projectDetails");
+        router.push(`/dhannu/projectDetails/${projectID}`);
     };
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        console.log("projects", projects);
-        console.log("list", list);
-        console.log("projectID", projectID);
-    }, [
-        projects
-    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ProjectContext.Provider, {
         value: {
-            projects,
             assignUser,
             statusOptions,
             priorityOptions,
@@ -1350,7 +1369,7 @@ const ProjectProvider = ({ children })=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/app/dhannu/context/ProjectContext.js",
-        lineNumber: 104,
+        lineNumber: 103,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

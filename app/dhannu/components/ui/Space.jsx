@@ -5,8 +5,11 @@ import { CiCircleRemove } from "react-icons/ci";
 import Link from "next/link";
 import { CiCircleList } from "react-icons/ci";
 import { SpaceContext } from "../../context/SpaceContext";
+import { CiCirclePlus } from "react-icons/ci";
+import { useRouter } from "next/navigation";
 
 function Space() {
+  const router = useRouter();
   const {
     space,
     handleSpace,
@@ -20,6 +23,10 @@ function Space() {
   } = useContext(SpaceContext);
 
   const [showList, setShowList] = useState(null);
+
+  const handleNavigation = (id) => {
+    router.push(`/dhannu/projects/${id}`);
+  };
 
   return (
     <div className="h-full w-full py-4">
@@ -62,14 +69,25 @@ function Space() {
                 >
                   {cur.spaceList.charAt(0)}
                 </span>
-                <Link href={`/dhannu/projects/${cur.id}`} className="w-full">
+                <Link
+                  href={`/dhannu/projectDetails/${cur.id}`}
+                  className="w-full"
+                >
                   <h1 className="text-sm text-gray-400 cursor-pointer py-1 px-2">
                     {cur.spaceList}
                   </h1>
                 </Link>
+
+                <span
+                  onClick={() => handleNavigation(cur.id)}
+                  className="text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors mr-1  duration-300"
+                >
+                  <CiCirclePlus size={20} />
+                </span>
+
                 <span
                   onClick={() => handleRemoveSpace(cur.id)}
-                  className="text-gray-300 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors duration-300"
+                  className="text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors duration-300"
                 >
                   <CiCircleRemove size={20} />
                 </span>
