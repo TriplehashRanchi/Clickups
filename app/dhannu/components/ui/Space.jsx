@@ -80,7 +80,7 @@ function Space() {
 
                 <span
                   onClick={() => handleNavigation(cur.id)}
-                  className="text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors mr-1  duration-300"
+                  className="text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-green-500 transition-colors mr-1  duration-300"
                 >
                   <CiCirclePlus size={20} />
                 </span>
@@ -96,7 +96,10 @@ function Space() {
               {cur.id === showList && (
                 <div className="w-full rounded-md flex items-center justify-center px-2 py-1  border-zinc-700">
                   <CiCircleList className="ml-7" size={20} />
-                  <Link href={`/dhannu/todos/${cur.id}`} className="w-full">
+                  <Link
+                    href={`/dhannu/projectList/${cur.id}`}
+                    className="w-full"
+                  >
                     <h1 className="text-sm text-gray-400 cursor-pointer py-1 px-2 ">
                       List
                     </h1>

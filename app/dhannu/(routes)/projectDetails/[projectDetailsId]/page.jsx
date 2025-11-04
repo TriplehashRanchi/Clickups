@@ -1,16 +1,12 @@
 "use client";
 import React, { useContext, useEffect, useState } from "react";
-import { AiOutlineThunderbolt } from "react-icons/ai";
-import { CiViewList } from "react-icons/ci";
-import { FaFlipboard } from "react-icons/fa";
-import { FcCalendar } from "react-icons/fc";
-import { GiArtificialHive } from "react-icons/gi";
-import { MdSupportAgent } from "react-icons/md";
 import Todo from "../../../components/todo/Todo";
 import { ProjectContext } from "../../../context/ProjectContext";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { SpaceContext } from "@/app/dhannu/context/SpaceContext";
+import Header from "@/app/dhannu/components/ui/Header";
+import NavigationTabs from "@/app/dhannu/components/ui/NavigationTabs";
 
 export default function ProjectTodo() {
   const { projectDetailsId } = useParams();
@@ -70,42 +66,9 @@ export default function ProjectTodo() {
   }, [projectState]);
 
   return (
-    <div className="w-full h-full relative bg-zinc-950 rounded-2xl">
-      <div className="w-full flex justify-between px-2 py-2">
-        <h1 className="text-xl text-zinc-200 font-semibold">
-          {"Dhannu Workspace"}
-        </h1>
-        <div className="flex gap-6 text-[15px]">
-          <div className="flex items-center gap-2">
-            <MdSupportAgent size={17} /> Agents
-          </div>
-          <div className="flex items-center gap-2">
-            <AiOutlineThunderbolt size={17} /> Automate
-          </div>
-          <div className="flex items-center gap-2">
-            <MdSupportAgent size={17} /> Ask AI
-          </div>
-          <div className="flex items-center gap-2">
-            <GiArtificialHive size={17} /> Share
-          </div>
-        </div>
-      </div>
-
-      <div className="flex items-center gap-4 border-b border-gray-800 px-2 py-1 text-sm text-gray-300">
-        <div className="flex items-center gap-1 cursor-pointer hover:text-white">
-          <CiViewList /> <span>List</span>
-        </div>
-        <div className="flex items-center gap-1 cursor-pointer hover:text-white">
-          <FaFlipboard /> <span>Board</span>
-        </div>
-        <div className="flex items-center gap-1 cursor-pointer hover:text-white">
-          <FcCalendar /> <span>Calendar</span>
-        </div>
-        <div className="flex items-center gap-1 border-l border-gray-700 pl-3 cursor-pointer hover:text-white">
-          <span>+</span>
-          <span>View</span>
-        </div>
-      </div>
+    <div className="w-full h-full p-4 relative bg-zinc-950 rounded-2xl">
+      <Header />
+      <NavigationTabs />
 
       <div className="w-full py-5 overflow-y-auto max-h-[calc(100vh-180px)] no-scrollbar ">
         {projectState.map((project, idx) => {
@@ -137,8 +100,9 @@ export default function ProjectTodo() {
               />
 
               <Link href={`/dhannu/projects/${project.id}`}>
-                <button className="bg-purple-600 hover:bg-purple-700 cursor-pointer absolute bottom-5 right-5 text-left rounded-full px-3 py-2 outline-none">
-                  Create Another Projects
+                <button className="fixed bottom-6 right-6 flex items-center gap-2 bg-purple-600/80 backdrop-blur-md text-white font-medium px-3 py-2 rounded-full shadow-md hover:bg-purple-700 hover:scale-105 transition-all duration-300">
+                  <span className="text-lg">+</span>
+                  <span>New Project</span>
                 </button>
               </Link>
             </div>

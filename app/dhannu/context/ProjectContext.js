@@ -38,7 +38,7 @@ export const ProjectProvider = ({ children }) => {
       icons: <RxCircle className="mt-1.5" size={16} />,
     },
     {
-      value: "inprogress",
+      value: "progress",
       label: "Progress",
       icons: <GiPlainCircle className="text-purple-600 mt-1.5" size={16} />,
     },
@@ -77,7 +77,8 @@ export const ProjectProvider = ({ children }) => {
 
     const newProject = {
       ...formData,
-      id: projectID,
+      id: Date.now(),
+      projectID: projectID,
       tasks: [],
     };
 

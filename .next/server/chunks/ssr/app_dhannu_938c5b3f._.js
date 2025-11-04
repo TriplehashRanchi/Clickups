@@ -756,9 +756,25 @@ function ProjectTodo() {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 href: `/dhannu/projects/${project.id}`,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "bg-purple-600 hover:bg-purple-700 cursor-pointer absolute bottom-5 right-5 text-left rounded-full px-3 py-2 outline-none",
-                                    children: "Create Another Projects"
-                                }, void 0, false, {
+                                    className: "fixed bottom-6 right-6 flex items-center gap-2 bg-purple-600/80 backdrop-blur-md text-white font-medium px-3 py-2 rounded-full shadow-md hover:bg-purple-700 hover:scale-105 transition-all duration-300",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "text-lg",
+                                            children: "+"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/dhannu/(routes)/projectDetails/[projectDetailsId]/page.jsx",
+                                            lineNumber: 141,
+                                            columnNumber: 19
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            children: "New Project"
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/dhannu/(routes)/projectDetails/[projectDetailsId]/page.jsx",
+                                            lineNumber: 142,
+                                            columnNumber: 19
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/app/dhannu/(routes)/projectDetails/[projectDetailsId]/page.jsx",
                                     lineNumber: 140,
                                     columnNumber: 17
