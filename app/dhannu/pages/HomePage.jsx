@@ -17,7 +17,7 @@ function HomePage() {
           onClick={() => handleSpace()}
           className="bg-purple-600 mt-4 cursor-pointer text-white p-2 rounded-md"
         >
-          Create new Space
+          Create new space
         </button>
       </div>
     </div>

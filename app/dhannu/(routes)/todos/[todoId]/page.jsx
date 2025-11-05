@@ -6,45 +6,62 @@ import NavigationTabs from "@/app/dhannu/components/ui/NavigationTabs";
 import { ProjectContext } from "@/app/dhannu/context/ProjectContext";
 import { SpaceContext } from "@/app/dhannu/context/SpaceContext";
 import { useParams } from "next/navigation";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 
 export default function Page() {
   const { todoId } = useParams();
   const { assignUser, priorityOptions, statusOptions } =
     useContext(ProjectContext);
   const { list, setList } = useContext(SpaceContext);
-  const currentTasks = list?.projects?.find((project) => project.id === todoId);
-  const tasks = currentTasks?.tasks || [];
 
-//   const handleAddTask = (taskName) => {
-//     const newTask = {
-//       id: Date.now(),
-//       name: taskName,
-//       assignee: "",
-//       priority: "",
-//       dueDate: "",
-//       status: "",
-//     };
+  // ✅ Find the current project tasks
+  const currentProject = list
+    ?.flatMap((space) => space.projects)
+    ?.find((project) => project.id == todoId);
 
-//     const updatedList = list.projects.map((project) => {
-//       return project.id === todoId
-//         ? { ...project, tasks: [...project.tasks, newTask] }
-//         : project;
-//     });
+  const tasks = currentProject?.tasks || [];
 
-//     setList(updatedList);
-//   };
+  // ✅ Add new task to correct project
+  const handleAddTask = (taskName) => {
+    const newTask = {
+      id: Date.now(),
+      name: taskName,
+      assignee: "",
+      priority: "",
+      dueDate: "",
+      status: "",
+    };
 
-//   const handleUpdateTask = (taskId, field, value) => {
-//     setTasks((prev) =>
-//       prev.map((cur) => (cur.id === taskId ? { ...cur, [field]: value } : cur))
-//     );
-//   };
+    setList((prevList) =>
+      prevList.map((space) => ({
+        ...space,
+        projects: space.projects.map((project) =>
+          project.id == todoId
+            ? { ...project, tasks: [...(project.tasks || []), newTask] }
+            : project
+        ),
+      }))
+    );
+  };
 
-
-  useEffect(() => {
-    console.log("list", list);
-  },[])
+  // ✅ Update a task (any field) inside list
+  const handleUpdateTask = (taskId, field, value) => {
+    setList((prevList) =>
+      prevList.map((space) => ({
+        ...space,
+        projects: space.projects.map((project) =>
+          project.id == todoId
+            ? {
+                ...project,
+                tasks: project.tasks.map((task) =>
+                  task.id === taskId ? { ...task, [field]: value } : task
+                ),
+              }
+            : project
+        ),
+      }))
+    );
+  };
 
   return (
     <div className="w-full h-full py-3 px-2">
@@ -53,8 +70,9 @@ export default function Page() {
 
       <div className="w-full flex flex-col mb-6 mt-3 border-zinc-700 pb-4 px-4">
         <div className="w-full flex justify-between items-center">
-          {/* ✅ Fixed heading */}
-          <h1 className="text-xl font-semibold text-zinc-300">Todo</h1>
+          <h1 className="text-xl font-semibold text-pink-600">
+            {currentProject?.name || "Todo"}
+          </h1>
 
           <div className="flex text-sm space-x-1 px-6">
             <div className="p-2 w-[120px] font-semibold">Assignee</div>

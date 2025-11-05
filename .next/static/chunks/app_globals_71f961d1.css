@@ -139,9 +139,6 @@
   :root, :host {
     --color-red-500: #fb2c36;
     --color-red-600: #e40014;
-    --color-red-800: #9f0712;
-    --color-red-900: #82181a;
-    --color-red-950: #460809;
     --color-orange-500: #fe6e00;
     --color-yellow-100: #fef9c2;
     --color-yellow-400: #fac800;
@@ -155,7 +152,6 @@
     --color-green-700: #008138;
     --color-teal-500: #00baa7;
     --color-blue-500: #3080ff;
-    --color-blue-900: #1c398e;
     --color-indigo-400: #7d87ff;
     --color-indigo-500: #625fff;
     --color-indigo-600: #4f39f6;
@@ -174,7 +170,6 @@
     --color-gray-600: #4a5565;
     --color-gray-700: #364153;
     --color-gray-800: #1e2939;
-    --color-gray-900: #101828;
     --color-zinc-200: #e4e4e7;
     --color-zinc-300: #d4d4d8;
     --color-zinc-400: #9f9fa9;
@@ -229,9 +224,6 @@
     :root, :host {
       --color-red-500: color(display-p3 .903738 .262579 .253307);
       --color-red-600: color(display-p3 .830323 .140383 .133196);
-      --color-red-800: color(display-p3 .569606 .121069 .108493);
-      --color-red-900: color(display-p3 .466906 .133198 .12139);
-      --color-red-950: color(display-p3 .25064 .0550983 .0468818);
       --color-orange-500: color(display-p3 .946589 .449788 .0757345);
       --color-yellow-100: color(display-p3 .993436 .977463 .782913);
       --color-yellow-400: color(display-p3 .959941 .790171 .0585198);
@@ -245,7 +237,6 @@
       --color-green-700: color(display-p3 .198355 .501799 .245335);
       --color-teal-500: color(display-p3 .266569 .721518 .655462);
       --color-blue-500: color(display-p3 .266422 .491219 .988624);
-      --color-blue-900: color(display-p3 .136395 .219428 .537145);
       --color-indigo-400: color(display-p3 .494992 .525291 .985107);
       --color-indigo-500: color(display-p3 .380374 .372235 .971707);
       --color-indigo-600: color(display-p3 .297656 .227891 .929242);
@@ -264,7 +255,6 @@
       --color-gray-600: color(display-p3 .297358 .332176 .39043);
       --color-gray-700: color(display-p3 .219968 .253721 .318679);
       --color-gray-800: color(display-p3 .125854 .159497 .216835);
-      --color-gray-900: color(display-p3 .070423 .0928982 .151928);
       --color-zinc-200: color(display-p3 .894477 .894477 .905114);
       --color-zinc-300: color(display-p3 .831087 .831083 .846819);
       --color-zinc-400: color(display-p3 .622604 .622563 .659842);
@@ -281,9 +271,6 @@
     :root, :host {
       --color-red-500: lab(55.4814% 75.0732 48.8528);
       --color-red-600: lab(48.4493% 77.4328 61.5452);
-      --color-red-800: lab(33.7174% 55.8993 41.0293);
-      --color-red-900: lab(28.5139% 44.5539 29.0463);
-      --color-red-950: lab(13.003% 29.04 16.7519);
       --color-orange-500: lab(64.272% 57.1788 90.3583);
       --color-yellow-100: lab(97.3564% -4.51407 27.344);
       --color-yellow-400: lab(83.2664% 8.65132 106.895);
@@ -297,7 +284,6 @@
       --color-green-700: lab(47.0329% -47.0239 31.4788);
       --color-teal-500: lab(67.3859% -49.0983 -2.63511);
       --color-blue-500: lab(54.1736% 13.3368 -74.6839);
-      --color-blue-900: lab(26.1542% 15.7545 -51.5504);
       --color-indigo-400: lab(59.866% 22.4833 -64.4485);
       --color-indigo-500: lab(48.295% 38.3129 -81.9673);
       --color-indigo-600: lab(38.4009% 52.6132 -92.3857);
@@ -316,7 +302,6 @@
       --color-gray-600: lab(35.6337% -1.58697 -10.8425);
       --color-gray-700: lab(27.1134% -.956401 -12.3224);
       --color-gray-800: lab(16.1051% -1.18239 -11.7533);
-      --color-gray-900: lab(8.11897% .811279 -12.254);
       --color-zinc-200: lab(90.6853% .399202 -1.45452);
       --color-zinc-300: lab(84.9837% .601262 -2.17985);
       --color-zinc-400: lab(65.6464% 1.53494 -5.42429);
@@ -813,10 +798,6 @@
     margin-top: calc(var(--spacing) * 5);
   }
 
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
-  }
-
   .mt-7 {
     margin-top: calc(var(--spacing) * 7);
   }
@@ -825,8 +806,20 @@
     margin-top: calc(var(--spacing) * 8);
   }
 
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+
+  .mt-24 {
+    margin-top: calc(var(--spacing) * 24);
+  }
+
   .mt-28 {
     margin-top: calc(var(--spacing) * 28);
+  }
+
+  .mt-48 {
+    margin-top: calc(var(--spacing) * 48);
   }
 
   .mr-1 {
@@ -885,20 +878,12 @@
     display: none;
   }
 
-  .inline-block {
-    display: inline-block;
-  }
-
   .inline-flex {
     display: inline-flex;
   }
 
   .table {
     display: table;
-  }
-
-  .h-4 {
-    height: calc(var(--spacing) * 4);
   }
 
   .h-5 {
@@ -931,6 +916,10 @@
 
   .h-\[28px\] {
     height: 28px;
+  }
+
+  .h-\[60vh\] {
+    height: 60vh;
   }
 
   .h-\[200px\] {
@@ -987,10 +976,6 @@
 
   .w-1\/3 {
     width: 33.3333%;
-  }
-
-  .w-4 {
-    width: calc(var(--spacing) * 4);
   }
 
   .w-5 {
@@ -1479,10 +1464,6 @@
     border-color: var(--color-zinc-900);
   }
 
-  .border-zinc-950 {
-    border-color: var(--color-zinc-950);
-  }
-
   .border-t-gray-800 {
     border-top-color: var(--color-gray-800);
   }
@@ -1553,20 +1534,12 @@
     background-color: var(--color-blue-500);
   }
 
-  .bg-blue-900 {
-    background-color: var(--color-blue-900);
-  }
-
   .bg-foreground {
     background-color: var(--foreground);
   }
 
   .bg-gray-100 {
     background-color: var(--color-gray-100);
-  }
-
-  .bg-gray-900 {
-    background-color: var(--color-gray-900);
   }
 
   .bg-green-100 {
@@ -1623,18 +1596,6 @@
     background-color: var(--color-red-600);
   }
 
-  .bg-red-800 {
-    background-color: var(--color-red-800);
-  }
-
-  .bg-red-900 {
-    background-color: var(--color-red-900);
-  }
-
-  .bg-red-950 {
-    background-color: var(--color-red-950);
-  }
-
   .bg-teal-500 {
     background-color: var(--color-teal-500);
   }
@@ -1653,10 +1614,6 @@
 
   .bg-yellow-500 {
     background-color: var(--color-yellow-500);
-  }
-
-  .bg-yellow-600 {
-    background-color: var(--color-yellow-600);
   }
 
   .bg-zinc-700 {
@@ -2036,10 +1993,6 @@
     font-size: 14px;
   }
 
-  .text-\[15px\] {
-    font-size: 15px;
-  }
-
   .text-\[16px\] {
     font-size: 16px;
   }
@@ -2080,10 +2033,6 @@
 
   .text-background {
     color: var(--background);
-  }
-
-  .text-black {
-    color: var(--color-black);
   }
 
   .text-gray-100 {
@@ -2188,10 +2137,6 @@
 
   .text-zinc-500 {
     color: var(--color-zinc-500);
-  }
-
-  .text-zinc-800 {
-    color: var(--color-zinc-800);
   }
 
   .capitalize {

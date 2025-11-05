@@ -14,8 +14,6 @@ export default function Page() {
   const currentSpace = list.find((space) => space.id == projectListId);
   const projects = currentSpace?.projects || [];
 
-  console.log("projects", projects);
-
   return (
     <div className="w-full h-full p-6 text-gray-200">
       {/* Page Header */}

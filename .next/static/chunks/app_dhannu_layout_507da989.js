@@ -13,7 +13,7 @@
   "static/chunks/node_modules_react-icons_gi_index_mjs_657583d5._.js",
   "static/chunks/node_modules_react-icons_rx_index_mjs_03f9ea46._.js",
   "static/chunks/node_modules_react-icons_lib_844c6c50._.js",
-  "static/chunks/node_modules_next_a760476a._.js",
+  "static/chunks/node_modules_next_fb5a6f21._.js",
   "static/chunks/app_dhannu_beea1056._.js"
 ],
     source: "dynamic"

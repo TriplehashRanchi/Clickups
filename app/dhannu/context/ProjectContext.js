@@ -11,6 +11,7 @@ export const ProjectContext = createContext();
 export const ProjectProvider = ({ children }) => {
   const { list, setList } = useContext(SpaceContext);
   const [projectID, setProjectId] = useState(null);
+  const [projectState, setProjectState] = useState([]);
   const router = useRouter();
 
   const [formData, setFormData] = useState({
@@ -97,7 +98,44 @@ export const ProjectProvider = ({ children }) => {
       endDate: "",
       description: "",
     });
-    router.push(`/dhannu/projectDetails/${projectID}`);
+    router.push(`/dhannu/projectList/${projectID}`);
+  };
+
+  const handleAddTask = (projectId, taskName) => {
+    const newTasks = {
+      id: Date.now(),
+      name: taskName,
+      assignee: "",
+      priority: "",
+      dueDate: "",
+      status: "",
+    };
+
+    const updatedProjectTask = projectState.map((project) =>
+      project.id == projectId
+        ? { ...project, tasks: [...project.tasks, newTasks] }
+        : project
+    );
+
+    setProjectState(updatedProjectTask);
+  };
+
+  const handleUpdateTask = (projectId, taskId, field, value) => {
+    setProjectState((prevProject) =>
+      prevProject.map((project) =>
+        project.id === projectId
+          ? {
+              ...project,
+              tasks:
+                field === "delete"
+                  ? project.tasks.filter((t) => t.id !== taskId)
+                  : project.tasks.map((task) =>
+                      task.id === taskId ? { ...task, [field]: value } : task
+                    ),
+            }
+          : project
+      )
+    );
   };
 
   return (
@@ -110,6 +148,10 @@ export const ProjectProvider = ({ children }) => {
         formData,
         handleChange,
         setProjectId,
+        handleUpdateTask,
+        handleAddTask,
+        projectState,
+        setProjectState
       }}
     >
       {children}

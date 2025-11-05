@@ -1,5 +1,6 @@
 "use client";
-import { createContext, useState } from "react";
+import { useRouter } from "next/navigation";
+import { createContext, useEffect, useState } from "react";
 
 export const SpaceContext = createContext();
 
@@ -8,6 +9,7 @@ export const SpaceProvide = ({ children }) => {
   const [spaceInput, setSpaceInput] = useState("");
   const [description, setDescription] = useState("");
   const [list, setList] = useState([]);
+  const router = useRouter();
 
   const handleSpace = () => {
     setSpace((prev) => !prev);
@@ -48,6 +50,12 @@ export const SpaceProvide = ({ children }) => {
   const handleRemoveSpace = (id) => {
     setList((prev) => prev.filter((cur) => cur.id !== id));
   };
+
+  useEffect(() => {
+    if (list.length === 0) {
+      router.push("/dhannu");
+    }
+  }, [list]);
 
   return (
     <SpaceContext.Provider

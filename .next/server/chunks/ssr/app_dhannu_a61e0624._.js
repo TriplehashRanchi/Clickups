@@ -609,43 +609,54 @@ function Page() {
     const { todoId } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useParams"])();
     const { assignUser, priorityOptions, statusOptions } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$context$2f$ProjectContext$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ProjectContext"]);
     const { list, setList } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$context$2f$SpaceContext$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SpaceContext"]);
-    const currentTasks = list?.projects?.find((project)=>project.id === todoId);
-    const tasks = currentTasks?.tasks || [];
-    //   const handleAddTask = (taskName) => {
-    //     const newTask = {
-    //       id: Date.now(),
-    //       name: taskName,
-    //       assignee: "",
-    //       priority: "",
-    //       dueDate: "",
-    //       status: "",
-    //     };
-    //     const updatedList = list.projects.map((project) => {
-    //       return project.id === todoId
-    //         ? { ...project, tasks: [...project.tasks, newTask] }
-    //         : project;
-    //     });
-    //     setList(updatedList);
-    //   };
-    //   const handleUpdateTask = (taskId, field, value) => {
-    //     setTasks((prev) =>
-    //       prev.map((cur) => (cur.id === taskId ? { ...cur, [field]: value } : cur))
-    //     );
-    //   };
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        console.log("list", list);
-    }, []);
+    // ✅ Find the current project tasks
+    const currentProject = list?.flatMap((space)=>space.projects)?.find((project)=>project.id == todoId);
+    const tasks = currentProject?.tasks || [];
+    // ✅ Add new task to correct project
+    const handleAddTask = (taskName)=>{
+        const newTask = {
+            id: Date.now(),
+            name: taskName,
+            assignee: "",
+            priority: "",
+            dueDate: "",
+            status: ""
+        };
+        setList((prevList)=>prevList.map((space)=>({
+                    ...space,
+                    projects: space.projects.map((project)=>project.id == todoId ? {
+                            ...project,
+                            tasks: [
+                                ...project.tasks || [],
+                                newTask
+                            ]
+                        } : project)
+                })));
+    };
+    // ✅ Update a task (any field) inside list
+    const handleUpdateTask = (taskId, field, value)=>{
+        setList((prevList)=>prevList.map((space)=>({
+                    ...space,
+                    projects: space.projects.map((project)=>project.id == todoId ? {
+                            ...project,
+                            tasks: project.tasks.map((task)=>task.id === taskId ? {
+                                    ...task,
+                                    [field]: value
+                                } : task)
+                        } : project)
+                })));
+    };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full h-full py-3 px-2",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$ui$2f$Header$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-                lineNumber: 51,
+                lineNumber: 68,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$ui$2f$NavigationTabs$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-                lineNumber: 52,
+                lineNumber: 69,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -655,11 +666,11 @@ function Page() {
                         className: "w-full flex justify-between items-center",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                                className: "text-xl font-semibold text-zinc-300",
-                                children: "Todo"
+                                className: "text-xl font-semibold text-pink-600",
+                                children: currentProject?.name || "Todo"
                             }, void 0, false, {
                                 fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-                                lineNumber: 57,
+                                lineNumber: 73,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -670,7 +681,7 @@ function Page() {
                                         children: "Assignee"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-                                        lineNumber: 60,
+                                        lineNumber: 78,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -678,7 +689,7 @@ function Page() {
                                         children: "Due date"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-                                        lineNumber: 61,
+                                        lineNumber: 79,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -686,7 +697,7 @@ function Page() {
                                         children: "Priority"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-                                        lineNumber: 62,
+                                        lineNumber: 80,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -694,19 +705,19 @@ function Page() {
                                         children: "Menu"
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-                                        lineNumber: 63,
+                                        lineNumber: 81,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-                                lineNumber: 59,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-                        lineNumber: 55,
+                        lineNumber: 72,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$todo$2f$Todo$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -719,19 +730,19 @@ function Page() {
                         onAddTask: handleAddTask
                     }, void 0, false, {
                         fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-                        lineNumber: 67,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-                lineNumber: 54,
+                lineNumber: 71,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/dhannu/(routes)/todos/[todoId]/page.jsx",
-        lineNumber: 50,
+        lineNumber: 67,
         columnNumber: 5
     }, this);
 }

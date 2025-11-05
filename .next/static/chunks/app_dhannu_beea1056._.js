@@ -9,10 +9,12 @@ __turbopack_context__.s([
     ()=>SpaceProvide
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 const SpaceContext = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createContext"])();
 const SpaceProvide = (param)=>{
@@ -22,6 +24,7 @@ const SpaceProvide = (param)=>{
     const [spaceInput, setSpaceInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [description, setDescription] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [list, setList] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const handleSpace = ()=>{
         setSpace((prev)=>!prev);
     };
@@ -56,6 +59,15 @@ const SpaceProvide = (param)=>{
     const handleRemoveSpace = (id)=>{
         setList((prev)=>prev.filter((cur)=>cur.id !== id));
     };
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "SpaceProvide.useEffect": ()=>{
+            if (list.length === 0) {
+                router.push("/dhannu");
+            }
+        }
+    }["SpaceProvide.useEffect"], [
+        list
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SpaceContext.Provider, {
         value: {
             space,
@@ -73,11 +85,15 @@ const SpaceProvide = (param)=>{
         children: children
     }, void 0, false, {
         fileName: "[project]/app/dhannu/context/SpaceContext.js",
-        lineNumber: 53,
+        lineNumber: 61,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(SpaceProvide, "88qcU6x9Q0NstERe7DZHlg32YE0=");
+_s(SpaceProvide, "QKYaOE8fJ0r9cWzxKCk3EqqF2K0=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
 _c = SpaceProvide;
 var _c;
 __turbopack_context__.k.register(_c, "SpaceProvide");
@@ -1247,6 +1263,7 @@ const ProjectProvider = (param)=>{
     _s();
     const { list, setList } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$context$2f$SpaceContext$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SpaceContext"]);
     const [projectID, setProjectId] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [projectState, setProjectState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const [formData, setFormData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({
         name: "",
@@ -1271,7 +1288,7 @@ const ProjectProvider = (param)=>{
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 33,
+                lineNumber: 34,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -1283,7 +1300,7 @@ const ProjectProvider = (param)=>{
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 38,
+                lineNumber: 39,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -1295,7 +1312,7 @@ const ProjectProvider = (param)=>{
                 size: 16
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 43,
+                lineNumber: 44,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         }
@@ -1327,7 +1344,7 @@ const ProjectProvider = (param)=>{
                 className: "text-red-600"
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 58,
+                lineNumber: 59,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -1339,7 +1356,7 @@ const ProjectProvider = (param)=>{
                 className: "text-yellow-600 "
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 63,
+                lineNumber: 64,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         },
@@ -1351,7 +1368,7 @@ const ProjectProvider = (param)=>{
                 className: "text-white "
             }, void 0, false, {
                 fileName: "[project]/app/dhannu/context/ProjectContext.js",
-                lineNumber: 68,
+                lineNumber: 69,
                 columnNumber: 14
             }, ("TURBOPACK compile-time value", void 0))
         }
@@ -1384,7 +1401,34 @@ const ProjectProvider = (param)=>{
             endDate: "",
             description: ""
         });
-        router.push("/dhannu/projectDetails/".concat(projectID));
+        router.push("/dhannu/projectList/".concat(projectID));
+    };
+    const handleAddTask = (projectId, taskName)=>{
+        const newTasks = {
+            id: Date.now(),
+            name: taskName,
+            assignee: "",
+            priority: "",
+            dueDate: "",
+            status: ""
+        };
+        const updatedProjectTask = projectState.map((project)=>project.id == projectId ? {
+                ...project,
+                tasks: [
+                    ...project.tasks,
+                    newTasks
+                ]
+            } : project);
+        setProjectState(updatedProjectTask);
+    };
+    const handleUpdateTask = (projectId, taskId, field, value)=>{
+        setProjectState((prevProject)=>prevProject.map((project)=>project.id === projectId ? {
+                    ...project,
+                    tasks: field === "delete" ? project.tasks.filter((t)=>t.id !== taskId) : project.tasks.map((task)=>task.id === taskId ? {
+                            ...task,
+                            [field]: value
+                        } : task)
+                } : project));
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(ProjectContext.Provider, {
         value: {
@@ -1394,16 +1438,20 @@ const ProjectProvider = (param)=>{
             createProject,
             formData,
             handleChange,
-            setProjectId
+            setProjectId,
+            handleUpdateTask,
+            handleAddTask,
+            projectState,
+            setProjectState
         },
         children: children
     }, void 0, false, {
         fileName: "[project]/app/dhannu/context/ProjectContext.js",
-        lineNumber: 104,
+        lineNumber: 142,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
-_s(ProjectProvider, "2KMqPjoGOGz1e2b/wkNxCMllvrs=", false, function() {
+_s(ProjectProvider, "HYENi4toUU+YTzFqNsRN+o0ri4c=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

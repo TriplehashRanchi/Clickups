@@ -207,18 +207,17 @@ function Page() {
     const { list } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useContext"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$context$2f$SpaceContext$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SpaceContext"]);
     const currentSpace = list.find((space)=>space.id == projectListId);
     const projects = currentSpace?.projects || [];
-    console.log("projects", projects);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full h-full p-6 text-gray-200",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$ui$2f$Header$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                lineNumber: 22,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$ui$2f$NavigationTabs$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                lineNumber: 23,
+                lineNumber: 21,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -231,12 +230,12 @@ function Page() {
                             children: currentSpace?.spaceList || "No Space Selected"
                         }, void 0, false, {
                             fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                            lineNumber: 27,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                        lineNumber: 26,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -253,7 +252,7 @@ function Page() {
                                                 children: "Project Name"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                lineNumber: 36,
+                                                lineNumber: 34,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -261,7 +260,7 @@ function Page() {
                                                 children: "Status"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                lineNumber: 39,
+                                                lineNumber: 37,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -269,7 +268,7 @@ function Page() {
                                                 children: "Assignee"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                lineNumber: 42,
+                                                lineNumber: 40,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -277,7 +276,7 @@ function Page() {
                                                 children: "Priority"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                lineNumber: 45,
+                                                lineNumber: 43,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
@@ -285,18 +284,18 @@ function Page() {
                                                 children: "End Date"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                lineNumber: 48,
+                                                lineNumber: 46,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                        lineNumber: 35,
+                                        lineNumber: 33,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                    lineNumber: 34,
+                                    lineNumber: 32,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
@@ -310,12 +309,12 @@ function Page() {
                                                         children: project.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                        lineNumber: 62,
+                                                        lineNumber: 60,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                    lineNumber: 61,
+                                                    lineNumber: 59,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -326,12 +325,12 @@ function Page() {
                                                         children: project.status
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                        lineNumber: 68,
+                                                        lineNumber: 66,
                                                         columnNumber: 25
                                                     }, this) : "-"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                    lineNumber: 66,
+                                                    lineNumber: 64,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -343,17 +342,17 @@ function Page() {
                                                             children: project.assignee ? project.assignee.charAt(0).toUpperCase() : "-"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                            lineNumber: 87,
+                                                            lineNumber: 85,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                        lineNumber: 86,
+                                                        lineNumber: 84,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                    lineNumber: 85,
+                                                    lineNumber: 83,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -365,17 +364,17 @@ function Page() {
                                                             className: project.priority === "high" ? "text-red-600" : project.priority === "medium" ? "text-yellow-500" : "text-gray-400"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                            lineNumber: 97,
+                                                            lineNumber: 95,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                        lineNumber: 96,
+                                                        lineNumber: 94,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                    lineNumber: 95,
+                                                    lineNumber: 93,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -383,13 +382,13 @@ function Page() {
                                                     children: project.endDate || "-"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                                    lineNumber: 110,
+                                                    lineNumber: 108,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, project.id, true, {
                                             fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                            lineNumber: 57,
+                                            lineNumber: 55,
                                             columnNumber: 19
                                         }, this)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
@@ -398,40 +397,40 @@ function Page() {
                                             children: "No projects found in this space"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                            lineNumber: 117,
+                                            lineNumber: 115,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                        lineNumber: 116,
+                                        lineNumber: 114,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                                    lineNumber: 54,
+                                    lineNumber: 52,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                            lineNumber: 33,
+                            lineNumber: 31,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                        lineNumber: 32,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-                lineNumber: 25,
+                lineNumber: 23,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/dhannu/(routes)/projectList/[projectListId]/page.jsx",
-        lineNumber: 20,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
