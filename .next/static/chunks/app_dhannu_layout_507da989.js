@@ -14,7 +14,7 @@
   "static/chunks/node_modules_react-icons_rx_index_mjs_03f9ea46._.js",
   "static/chunks/node_modules_react-icons_lib_844c6c50._.js",
   "static/chunks/node_modules_next_fb5a6f21._.js",
-  "static/chunks/app_dhannu_beea1056._.js"
+  "static/chunks/app_dhannu_e6ae1506._.js"
 ],
     source: "dynamic"
 });

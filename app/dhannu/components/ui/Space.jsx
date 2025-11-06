@@ -7,6 +7,7 @@ import { CiCircleList } from "react-icons/ci";
 import { SpaceContext } from "../../context/SpaceContext";
 import { CiCirclePlus } from "react-icons/ci";
 import { useRouter } from "next/navigation";
+import Modal from "../resuableComponents/Modal";
 
 function Space() {
   const router = useRouter();
@@ -20,6 +21,8 @@ function Space() {
     setSpaceInput,
     setDescription,
     handleRemoveSpace,
+    isModalOpen,
+    setIsModalOpen,
   } = useContext(SpaceContext);
 
   const [showList, setShowList] = useState(null);
@@ -86,12 +89,20 @@ function Space() {
                 </span>
 
                 <span
-                  onClick={() => handleRemoveSpace(cur.id)}
+                  onClick={() => setIsModalOpen(true)}
                   className="text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors duration-300"
                 >
                   <CiCircleRemove size={20} />
                 </span>
               </div>
+
+              <Modal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                title="Delete Task"
+                onDelete={() => handleRemoveSpace(cur.id)}
+                message="Are you sure you want to delete this task? This action cannot be undone."
+              />
 
               {cur.id === showList && (
                 <div className="w-full rounded-md flex items-center justify-center px-2 py-1  border-zinc-700">

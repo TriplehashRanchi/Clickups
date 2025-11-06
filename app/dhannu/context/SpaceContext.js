@@ -9,6 +9,8 @@ export const SpaceProvide = ({ children }) => {
   const [spaceInput, setSpaceInput] = useState("");
   const [description, setDescription] = useState("");
   const [list, setList] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const router = useRouter();
 
   const handleSpace = () => {
@@ -49,6 +51,7 @@ export const SpaceProvide = ({ children }) => {
 
   const handleRemoveSpace = (id) => {
     setList((prev) => prev.filter((cur) => cur.id !== id));
+    setIsModalOpen(false);
   };
 
   useEffect(() => {
@@ -71,6 +74,8 @@ export const SpaceProvide = ({ children }) => {
         setList,
         handleList,
         handleRemoveSpace,
+        isModalOpen,
+        setIsModalOpen,
       }}
     >
       {children}
