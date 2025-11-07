@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 19, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/krson/OneDrive/Desktop/new%20triplehash/Clickups/app/dhannu/%28routes%29/todos/%5BtodoId%5D/page.jsx"],"sourcesContent":["import { useParams } from \"next/navigation\";\r\nimport React from \"react\";\r\n\r\nexport default function page() {\r\n  const id = useParams();\r\n  console.log(id);\r\n  return (\r\n    <div>\r\n      <h1>todo</h1>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAA;AAAA;AACA;;;;AAEe,SAAS;IACtB,MAAM,KAAK,IAAA,kMAAS;IACpB,QAAQ,GAAG,CAAC;IACZ,qBACE,8OAAC;kBACC,cAAA,8OAAC;sBAAG;;;;;;;;;;;AAGV","debugId":null}}]
-}
