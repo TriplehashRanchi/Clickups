@@ -8,6 +8,7 @@ export default function Dropdown({
   className = "",
   showInitial = false,
   showIcons = false,
+  styling,
 }) {
   const [open, setOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState(null);
@@ -22,9 +23,9 @@ export default function Dropdown({
     <div>
       <div onClick={() => setOpen(!open)} className="w-full cursor-pointer">
         <button
-          className={`text-sm cursor-pointer outline-none ${
+          className={`${styling} text-sm cursor-pointer outline-none ${
             selectedValue ? className : ""
-          }`}
+          } `}
         >
           {selectedValue
             ? showInitial

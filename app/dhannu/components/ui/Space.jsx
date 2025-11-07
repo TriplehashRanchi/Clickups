@@ -5,8 +5,12 @@ import { CiCircleRemove } from "react-icons/ci";
 import Link from "next/link";
 import { CiCircleList } from "react-icons/ci";
 import { SpaceContext } from "../../context/SpaceContext";
+import { CiCirclePlus } from "react-icons/ci";
+import { useRouter } from "next/navigation";
+import Modal from "../resuableComponents/Modal";
 
 function Space() {
+  const router = useRouter();
   const {
     space,
     handleSpace,
@@ -17,9 +21,15 @@ function Space() {
     setSpaceInput,
     setDescription,
     handleRemoveSpace,
+    isModalOpen,
+    setIsModalOpen,
   } = useContext(SpaceContext);
 
   const [showList, setShowList] = useState(null);
+
+  const handleNavigation = (id) => {
+    router.push(`/dhannu/projects/${id}`);
+  };
 
   return (
     <div className="h-full w-full py-4">
@@ -62,23 +72,45 @@ function Space() {
                 >
                   {cur.spaceList.charAt(0)}
                 </span>
-                <Link href={`/dhannu/projects/${cur.id}`} className="w-full">
+                <Link
+                  href={`/dhannu/projectDetails/${cur.id}`}
+                  className="w-full"
+                >
                   <h1 className="text-sm text-gray-400 cursor-pointer py-1 px-2">
                     {cur.spaceList}
                   </h1>
                 </Link>
+
                 <span
-                  onClick={() => handleRemoveSpace(cur.id)}
-                  className="text-gray-300 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors duration-300"
+                  onClick={() => handleNavigation(cur.id)}
+                  className="text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-green-500 transition-colors mr-1  duration-300"
+                >
+                  <CiCirclePlus size={20} />
+                </span>
+
+                <span
+                  onClick={() => setIsModalOpen(true)}
+                  className="text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors duration-300"
                 >
                   <CiCircleRemove size={20} />
                 </span>
               </div>
 
+              <Modal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                title="Delete Task"
+                onDelete={() => handleRemoveSpace(cur.id)}
+                message="Are you sure you want to delete this task? This action cannot be undone."
+              />
+
               {cur.id === showList && (
                 <div className="w-full rounded-md flex items-center justify-center px-2 py-1  border-zinc-700">
                   <CiCircleList className="ml-7" size={20} />
-                  <Link href={`/dhannu/todos/${cur.id}`} className="w-full">
+                  <Link
+                    href={`/dhannu/projectList/${cur.id}`}
+                    className="w-full"
+                  >
                     <h1 className="text-sm text-gray-400 cursor-pointer py-1 px-2 ">
                       List
                     </h1>
