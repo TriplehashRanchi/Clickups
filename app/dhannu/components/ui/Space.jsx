@@ -99,9 +99,9 @@ function Space() {
               <Modal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
-                title="Delete Task"
+                title="Delete Space"
                 onDelete={() => handleRemoveSpace(cur.id)}
-                message="Are you sure you want to delete this task? This action cannot be undone."
+                message="Are you sure you want to delete this Space?."
               />
 
               {cur.id === showList && (

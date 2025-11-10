@@ -399,22 +399,22 @@ function Modal(param) {
     if (!isOpen) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         onClick: onClose,
-        className: "fixed inset-0 flex items-center justify-center bg-black/50 z-50",
+        className: "fixed inset-0 flex items-center justify-center bg-black/50 z-50 transition-opacity duration-300",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             onClick: (e)=>e.stopPropagation(),
-            className: "bg-zinc-900 border border-zinc-700 w-[420px] p-6 rounded-2xl shadow-2xl relative text-white transition-all duration-300",
+            className: "bg-zinc-900 border border-zinc-800 w-[420px] max-w-[90%] p-6 rounded-2xl shadow-2xl text-white relative transform transition-all duration-300 scale-100 animate-modalEnter",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: onClose,
-                    className: "absolute top-3 cursor-pointer right-3 text-zinc-400 hover:text-white text-2xl transition",
-                    children: "×"
+                    className: "absolute text-sm top-3 text-zinc-400 right-3 cursor-pointer rounded-full",
+                    children: "✕"
                 }, void 0, false, {
                     fileName: "[project]/app/dhannu/components/resuableComponents/Modal.jsx",
                     lineNumber: 16,
                     columnNumber: 9
                 }, this),
                 title && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                    className: "text-xl font-semibold mb-3 tracking-wide text-white/90",
+                    className: "text-xl font-semibold mb-2 text-white tracking-wide",
                     children: title
                 }, void 0, false, {
                     fileName: "[project]/app/dhannu/components/resuableComponents/Modal.jsx",
@@ -422,7 +422,7 @@ function Modal(param) {
                     columnNumber: 11
                 }, this),
                 message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-zinc-400 text-sm leading-relaxed mb-6",
+                    className: "text-sm text-zinc-400 leading-relaxed mb-6",
                     children: message
                 }, void 0, false, {
                     fileName: "[project]/app/dhannu/components/resuableComponents/Modal.jsx",
@@ -430,11 +430,11 @@ function Modal(param) {
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex justify-end space-x-3",
+                    className: "flex justify-end gap-3",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: onClose,
-                            className: "px-4 py-2 cursor-pointer rounded-lg bg-zinc-700 hover:bg-zinc-600 text-white/90 transition",
+                            className: "px-4 cursor-pointer py-2 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-sm font-medium transition-all duration-200",
                             children: "Cancel"
                         }, void 0, false, {
                             fileName: "[project]/app/dhannu/components/resuableComponents/Modal.jsx",
@@ -443,7 +443,7 @@ function Modal(param) {
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: onDelete,
-                            className: "px-4 py-2 cursor-pointer rounded-lg bg-gradient-to-r from-pink-500 to-red-500 hover:opacity-90 text-white font-medium shadow-md transition",
+                            className: "px-4 py-2 cursor-pointer rounded-lg bg-red-600 hover:bg-red-700 text-sm font-medium shadow-lg shadow-red-600/20 transition-all duration-200",
                             children: "Delete"
                         }, void 0, false, {
                             fileName: "[project]/app/dhannu/components/resuableComponents/Modal.jsx",
@@ -652,9 +652,9 @@ function Space() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$dhannu$2f$components$2f$resuableComponents$2f$Modal$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     isOpen: isModalOpen,
                                     onClose: ()=>setIsModalOpen(false),
-                                    title: "Delete Task",
+                                    title: "Delete Space",
                                     onDelete: ()=>handleRemoveSpace(cur.id),
-                                    message: "Are you sure you want to delete this task? This action cannot be undone."
+                                    message: "Are you sure you want to delete this Space?."
                                 }, void 0, false, {
                                     fileName: "[project]/app/dhannu/components/ui/Space.jsx",
                                     lineNumber: 99,
