@@ -6,7 +6,7 @@ import NavigationTabs from "@/app/dhannu/components/ui/NavigationTabs";
 import { ProjectContext } from "@/app/dhannu/context/ProjectContext";
 import { SpaceContext } from "@/app/dhannu/context/SpaceContext";
 import { useParams } from "next/navigation";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
 export default function Page() {
   const { todoId } = useParams();
@@ -14,21 +14,21 @@ export default function Page() {
     useContext(ProjectContext);
   const { list, setList } = useContext(SpaceContext);
 
-  // ✅ Find the current project tasks
+  // ✅ Find current project
   const currentProject = list
     ?.flatMap((space) => space.projects)
     ?.find((project) => project.id == todoId);
 
   const tasks = currentProject?.tasks || [];
 
-  // ✅ Add new task to correct project
+  // ✅ Add new task
   const handleAddTask = (taskName) => {
     const newTask = {
       id: Date.now(),
       name: taskName,
       assignee: "",
       priority: "",
-      dueDate: "",
+      dueDate: "", // ✅ consistent naming
       status: "",
     };
 
@@ -44,7 +44,7 @@ export default function Page() {
     );
   };
 
-  // ✅ Update a task (any field) inside list
+  // ✅ Update or delete task
   const handleUpdateTask = (taskId, field, value) => {
     setList((prevList) =>
       prevList.map((space) => ({
@@ -53,9 +53,12 @@ export default function Page() {
           project.id == todoId
             ? {
                 ...project,
-                tasks: project.tasks.map((task) =>
-                  task.id === taskId ? { ...task, [field]: value } : task
-                ),
+                tasks:
+                  field === "delete"
+                    ? project.tasks.filter((task) => task.id != taskId)
+                    : project.tasks.map((task) =>
+                        task.id === taskId ? { ...task, [field]: value } : task
+                      ),
               }
             : project
         ),
@@ -84,7 +87,6 @@ export default function Page() {
 
         <Todo
           tasks={tasks}
-          styling="bg-red-600 text-2xl"
           statuses={statusOptions}
           priority={priorityOptions}
           assignee={assignUser}

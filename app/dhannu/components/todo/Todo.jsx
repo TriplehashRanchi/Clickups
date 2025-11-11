@@ -43,11 +43,11 @@ export default function Todo({
         {tasks.map((task) => {
           return (
             <div
-              className="flex text-sm justify-between mt-2 items-center gap-2 border-b border-t border-b-zinc-900 border-t-zinc-900 px-3 text-zinc-300"
+              className="flex hover:bg-zinc-900 text-sm justify-between items-center  mt-3 border-b border-t border-b-zinc-900 border-t-zinc-900 px-3  text-zinc-300"
               key={task.id}
             >
               <div className="w-full flex justify-between items-center">
-                <div className="flex gap-1 justify-center items-center">
+                <div className="flex gap-2 justify-center items-center">
                   <Dropdown
                     items={statuses}
                     showIcons={true}
@@ -72,13 +72,13 @@ export default function Todo({
                       className="w-full bg-transparent p-2 outline-none text-sm"
                     />
                   ) : (
-                    <h1 className="text-sm font-medium text-zinc-200">
+                    <h1 className="text-sm hover:text-purple-500 w-full mt-0.5 font-medium text-zinc-200">
                       {task.name}
                     </h1>
                   )}
                 </div>
                 <div className="flex text-sm space-x-1 px-9 h-full">
-                  <div className=" py-2 flex justify-center items-center w-[120px] font-semibold hover:bg-zinc-900">
+                  <div className="flex justify-center items-center w-[120px] font-semibold hover:border-zinc-600 rounded-md hover:border">
                     <Dropdown
                       placeholder={<IoPeopleSharp size={17} />}
                       items={assignee}
@@ -89,7 +89,7 @@ export default function Todo({
                       className="bg-purple-600 w-6 h-6 rounded-full text-xs font-semibold flex justify-center items-center"
                     />
                   </div>
-                  <div className="  py-2 px-2 flex justify-center items-center w-[120px] font-semibold hover:bg-zinc-900">
+                  <div className="px-2 flex justify-center items-center w-[120px] font-semibold hover:bg-zinc-900 hover:border-zinc-600 rounded-md hover:border">
                     <input
                       type="date"
                       value={task.duedate}
@@ -105,7 +105,7 @@ export default function Todo({
                       }
                     `}</style>
                   </div>
-                  <div className=" py-2 flex justify-center items-center w-[120px] hover:bg-zinc-900">
+                  <div className="flex justify-center items-center w-[120px] hover:bg-zinc-900 hover:border-zinc-600 rounded-md hover:border">
                     <Dropdown
                       items={priority}
                       showIcons={true}
@@ -118,8 +118,8 @@ export default function Todo({
                       }
                     />
                   </div>
-                  <div className=" py-2 flex justify-center items-center w-[120px] font-semibold hover:bg-zinc-900">
-                    <div className="relative py-2 flex justify-center items-center w-[120px] font-semibold hover:bg-zinc-900">
+                  <div className=" py-1 flex justify-center items-center w-[120px] font-semibold hover:bg-zinc-900 hover:border-zinc-600 rounded-md hover:border">
+                    <div className="relative py-2 flex justify-center items-center w-[120px] font-semibold hover:bg-zinc-900 ">
                       <BiDotsVerticalRounded
                         size={17}
                         className="cursor-pointer hover:text-white"

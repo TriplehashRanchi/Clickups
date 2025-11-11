@@ -83,14 +83,14 @@ function Space() {
 
                 <span
                   onClick={() => handleNavigation(cur.id)}
-                  className="text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-green-500 transition-colors mr-1  duration-300"
+                  className="text-gray-400 hover:bg-zinc-700 rounded-md px-2 opacity-0 group-hover:opacity-100 cursor-pointer transition-colors mr-1  duration-300"
                 >
-                  <CiCirclePlus size={20} />
+                  +
                 </span>
 
                 <span
                   onClick={() => setIsModalOpen(true)}
-                  className="text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors duration-300"
+                  className="text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-400 transition-colors duration-300"
                 >
                   <CiCircleRemove size={20} />
                 </span>

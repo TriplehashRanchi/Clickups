@@ -596,14 +596,8 @@ function Space() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             onClick: ()=>handleNavigation(cur.id),
-                                            className: "text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-green-500 transition-colors mr-1  duration-300",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$ci$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CiCirclePlus"], {
-                                                size: 20
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/dhannu/components/ui/Space.jsx",
-                                                lineNumber: 88,
-                                                columnNumber: 19
-                                            }, this)
+                                            className: "text-gray-400 hover:bg-zinc-700 rounded-md px-2 opacity-0 group-hover:opacity-100 cursor-pointer transition-colors mr-1  duration-300",
+                                            children: "+"
                                         }, void 0, false, {
                                             fileName: "[project]/app/dhannu/components/ui/Space.jsx",
                                             lineNumber: 84,
@@ -611,7 +605,7 @@ function Space() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             onClick: ()=>setIsModalOpen(true),
-                                            className: "text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-500 transition-colors duration-300",
+                                            className: "text-gray-400 opacity-0 group-hover:opacity-100 cursor-pointer hover:text-red-400 transition-colors duration-300",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$ci$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["CiCircleRemove"], {
                                                 size: 20
                                             }, void 0, false, {
