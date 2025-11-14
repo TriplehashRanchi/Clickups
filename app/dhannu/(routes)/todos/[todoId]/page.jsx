@@ -30,6 +30,7 @@ export default function Page() {
       priority: "",
       dueDate: "", // ✅ consistent naming
       status: "",
+      subTodo : []
     };
 
     setList((prevList) =>
