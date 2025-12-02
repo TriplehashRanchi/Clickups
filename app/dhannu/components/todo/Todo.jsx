@@ -205,28 +205,6 @@ export default function Todo({
                 </button>
               </div>
             )}
-
-            {/* Display SubTodos
-            {task.subTodos && task.subTodos.length > 0 && (
-              <div className="ml-12 mt-1">
-                {task.subTodos.map((sub, index) => (
-                  <div
-                    key={index}
-                    className="flex justify-between items-center text-xs py-1 px-2 border-b border-zinc-800"
-                  >
-                    <p>{sub}</p>
-                    <button
-                      onClick={() =>
-                        onUpdateTask(task.id, "deleteSubTodo", index)
-                      }
-                      className="text-red-400 hover:text-red-500"
-                    >
-                      <MdDelete size={14} />
-                    </button>
-                  </div>
-                ))}
-              </div>
-            )} */}
           </div>
         ))}
       </div>

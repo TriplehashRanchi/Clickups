@@ -916,10 +916,6 @@
     margin-left: calc(var(--spacing) * 10);
   }
 
-  .ml-12 {
-    margin-left: calc(var(--spacing) * 12);
-  }
-
   .block {
     display: block;
   }
@@ -2383,10 +2379,6 @@
 
   .text-purple-600 {
     color: var(--color-purple-600);
-  }
-
-  .text-red-400 {
-    color: var(--color-red-400);
   }
 
   .text-red-500 {
